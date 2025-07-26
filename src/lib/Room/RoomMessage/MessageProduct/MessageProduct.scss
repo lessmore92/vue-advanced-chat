@@ -1,29 +1,43 @@
 /* Custom message types */
 .vac-message-product-question {
-	border-right: 4px solid #ff9800;
-	background: rgba(255, 152, 0, 0.1);
-	padding: 12px;
-	border-radius: 8px;
-	margin-top: 8px;
+  border-right: 4px solid #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px 0;
 }
 
 .vac-message-product-question .product-info {
-	display: flex;
-	align-items: center;
-	margin-bottom: 8px;
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 
 .vac-message-product-question .product-image {
-	width: 40px;
-	height: 40px;
-	border-radius: 4px;
-	margin-left: 12px;
-	object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 12px;
+  object-fit: cover;
 }
 
 .vac-message-product-question .product-name {
-	font-weight: 600;
-	color: #ff9800;
+  font-weight: 600;
+  color: #ff9800;
+}
+
+.btn-view {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #1975bb;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.btn-view:hover {
+  background: #2779bd;
+  color: #fff;
 }

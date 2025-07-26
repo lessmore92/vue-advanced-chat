@@ -11,6 +11,15 @@
                 {{ formattedPrice }}
             </span>
         </div>
+        <a
+          v-if="url"
+          :href="url"
+          target="_blank"
+          rel="noopener"
+          class="btn-view"
+        >
+          {{ buttonText }}
+        </a>
       </div>
     </div>
   </div>
@@ -36,6 +45,12 @@ export default {
     },
     hasDiscount() {
       return !!this.message.metadata.discount_price
+    },
+    url() {
+      return this.message.metadata.url || null
+    },
+    buttonText() {
+      return this.message.metadata.button_text || 'مشاهده محصول'
     },
     formattedPrice() {
       const number = Number(this.price)
