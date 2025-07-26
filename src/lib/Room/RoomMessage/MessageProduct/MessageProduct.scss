@@ -1,0 +1,29 @@
+/* Custom message types */
+.vac-message-product-question {
+	border-right: 4px solid #ff9800;
+	background: rgba(255, 152, 0, 0.1);
+	padding: 12px;
+	border-radius: 8px;
+	margin-top: 8px;
+}
+
+.vac-message-product-question .product-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 4px;
+}
+
+.vac-message-product-question .product-image {
+	width: 40px;
+	height: 40px;
+	border-radius: 4px;
+	margin-left: 12px;
+	object-fit: cover;
+}
+
+.vac-message-product-question .product-name {
+	font-weight: 600;
+	color: #ff9800;
+}

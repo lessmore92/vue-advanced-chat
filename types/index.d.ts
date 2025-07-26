@@ -78,6 +78,7 @@ export interface Message {
 	files?: MessageFile[]
 	reactions?: MessageReactions
 	replyMessage?: Message
+  type?: string
 }
 
 export interface CustomAction {

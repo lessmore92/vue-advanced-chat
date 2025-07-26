@@ -88,6 +88,16 @@
 							</template>
 						</message-reply>
 
+            <message-product
+              v-if="!message.deleted && message.type && message.type === 'product'"
+              :message="message"
+              :room-users="roomUsers"
+            >
+              <template v-for="(i, name) in $slots" #[name]="data">
+                <slot :name="name" v-bind="data" />
+              </template>
+            </message-product>
+
 						<format-message
 							v-if="
 								!!message.deleted || !message.files || !message.files.length
@@ -234,10 +244,12 @@ import AudioPlayer from './AudioPlayer/AudioPlayer'
 
 import { messagesValidation } from '../../../utils/data-validation'
 import { isAudioFile } from '../../../utils/media-file'
+import MessageProduct from './MessageProduct/MessageProduct.vue'
 
 export default {
 	name: 'RoomMessage',
 	components: {
+    MessageProduct,
 		SvgIcon,
 		FormatMessage,
 		AudioPlayer,
